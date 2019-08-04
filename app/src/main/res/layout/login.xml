@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/background_main">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_round_corner"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+
+        <TextView
+            android:id="@+id/headerSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/audiowide"
+            android:text="Sign In"
+            android:textColor="#DCDCDC"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/usernameLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintVertical_bias="0.5" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/usernameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColorHint="@android:color/white"
+            app:counterEnabled="true"
+            app:counterTextAppearance="@style/InvisibileHint"
+            app:hintTextAppearance="@style/HintText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerSignIn">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:hint="USERNAME"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="17sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/passwordLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textColorHint="@android:color/white"
+            app:counterEnabled="true"
+            app:counterTextAppearance="@style/InvisibileHint"
+            app:hintTextAppearance="@style/HintText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/usernameLayout">
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/acme"
+                android:hint="PASSWORD"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+                android:textSize="17sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="@dimen/login_button_length"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/proceed_btn"
+            android:enabled="false"
+            android:fontFamily="@font/acme"
+            android:text="@string/acc_login"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/login_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLayout" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@drawable/background_main"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto">-->
+
+    <!--<EditText-->
+        <!--android:id="@+id/tvpass"-->
+        <!--android:layout_width="203dp"-->
+        <!--android:layout_height="49dp"-->
+        <!--android:layout_marginTop="88dp"-->
+        <!--android:ems="10"-->
+        <!--android:fontFamily="@font/acme"-->
+        <!--android:hint="@string/enter_pin"-->
+        <!--android:inputType="numberPassword"-->
+        <!--android:maxLength="4"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="#FFFFFF"-->
+        <!--android:textColorHint="#FFFFFF"-->
+        <!--android:textSize="@dimen/login_textfield"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/benter"-->
+        <!--android:layout_width="@dimen/login_button_length"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="24dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:fontFamily="@font/acme"-->
+        <!--android:text="@string/submit"-->
+        <!--android:textSize="@dimen/login_button"-->
+        <!--android:textColor="@android:color/white"-->
+        <!--android:background="@drawable/rounded_button"-->
+        <!--android:textAlignment="center"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.498"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/tvpass"-->
+        <!--app:layout_constraintVertical_bias="0.03" />-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/linearLayout"-->
+        <!--style="?attr/buttonBarStyle"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2.0"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/bdirector"-->
+            <!--style="?attr/buttonBarButtonStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#6F4262"-->
+            <!--android:fontFamily="@font/acme"-->
+            <!--android:text="@string/director"-->
+            <!--android:textSize="@dimen/admin_dir_header"-->
+            <!--android:textColor="#FFFFFF" />-->
+
+        <!--&lt;!&ndash;<View&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="1dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@android:color/white" />&ndash;&gt;-->
+
+        <!--<Button-->
+            <!--android:id="@+id/badmin"-->
+            <!--style="?attr/buttonBarButtonStyle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#FFFFFF"-->
+            <!--android:text="@string/admin"-->
+            <!--android:textSize="@dimen/admin_dir_header"-->
+            <!--android:textColor="#FFFFFF" />-->
+    <!--</LinearLayout>-->
+<!--</android.support.constraint.ConstraintLayout>-->
